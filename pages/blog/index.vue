@@ -36,6 +36,24 @@ export default {
         }
       })
   }
+  // data() {
+  //   return {
+  //     posts: [
+  //       {
+  //         title: 'My First Post',
+  //         previewText: 'This is me getting started with a Nuxt Blog',
+  //         thumbnailUrl: 'http://lorempixel.com/400/200/sports',
+  //         id: 'a-new-beginning'
+  //       },
+  //       {
+  //         title: 'My Second Post',
+  //         previewText: 'This is an article about slavery in the Bible',
+  //         thumbnailUrl: 'http://lorempixel.com/400/200/sports',
+  //         id: 'devcodes-blog'
+  //       }
+  //     ]
+  //   }
+  // }
 }
 </script>
 
