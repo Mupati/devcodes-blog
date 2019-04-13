@@ -47,7 +47,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # copy dist files to digitalocean
-      - run: scp -o StrictHostKeyChecking=no -r ./dist/* mupati@167.99.220.186://home/projects/devcodes/
+      - run: scp -o StrictHostKeyChecking=no -r ./dist/* mupati@devcodes.co://home/projects/devcodes/
 
       ################ WARNING WARNING #####################
       # doing no strict host key check is a security risk to some extent.
