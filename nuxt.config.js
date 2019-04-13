@@ -51,7 +51,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~plugins/ga.js', ssr: false }],
+  plugins: [],
 
   /*
    ** Nuxt.js modules
@@ -67,6 +67,12 @@ export default {
             ? '4lBKmfH0c8GkkPfryFIBywtt'
             : 'nsd8ctxirqtZAxFQwxYgLwtt',
         cacheProvider: 'memory'
+      }
+    ],
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-131436918-3'
       }
     ]
   ],
