@@ -71,4 +71,9 @@
 .nav-link.nuxt-link-active a {
   color: #06c4d1;
 }
+@media (max-width: 35rem) {
+  .nav-links {
+    overflow-x: auto;
+  }
+}
 </style>
