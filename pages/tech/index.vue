@@ -21,13 +21,13 @@ export default {
     return context.app.$storyapi
       .get('cdn/stories', {
         version: context.isDev ? 'draft' : 'published',
-        starts_with: 'blog'
+        starts_with: 'tech'
       })
       .then(res => {
         return {
           posts: res.data.stories.map(el => {
             return {
-              id: el.slug,
+              id: el.full_slug,
               title: el.content.title,
               previewText: el.content.summary,
               thumbnailUrl: el.content.thumbnail
@@ -36,24 +36,6 @@ export default {
         }
       })
   }
-  // data() {
-  //   return {
-  //     posts: [
-  //       {
-  //         title: 'My First Post',
-  //         previewText: 'This is me getting started with a Nuxt Blog',
-  //         thumbnailUrl: 'http://lorempixel.com/400/200/sports',
-  //         id: 'a-new-beginning'
-  //       },
-  //       {
-  //         title: 'My Second Post',
-  //         previewText: 'This is an article about slavery in the Bible',
-  //         thumbnailUrl: 'http://lorempixel.com/400/200/sports',
-  //         id: 'devcodes-blog'
-  //       }
-  //     ]
-  //   }
-  // }
 }
 </script>
 
@@ -61,8 +43,6 @@ export default {
 #posts {
   padding-top: 2rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 @media (min-width: 35rem) {

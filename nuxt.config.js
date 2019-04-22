@@ -8,7 +8,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Devcodes Blog',
+    title: 'Mupati The Wordsmith',
     meta: [
       {
         charset: 'utf-8'
@@ -78,17 +78,53 @@ export default {
   ],
 
   generate: {
-    routes: function() {
-      return axios
-        .get(
-          'https://api.storyblok.com/v1/cdn/stories?&version=published&token=4lBKmfH0c8GkkPfryFIBywtt&starts_with=blog&cv=' +
-            Math.floor(Date.now() / 1e3)
-        )
-        .then(res => {
-          const blogPosts = res.data.stories.map(el => el.full_slug)
-          return ['/', '/blog', '/about', ...blogPosts]
+    // generate: {
+    routes: function(callback) {
+      const token = `4lBKmfH0c8GkkPfryFIBywtt`
+      const version = 'published'
+      let cacheVersion = 0
+
+      // other routes that are not in Storyblok with their slug.
+      const routes = ['/'] // adds / directly
+
+      // Load space and receive latest cache version key to improve performance
+      axios
+        .get(`https://api.storyblok.com/v1/cdn/spaces/me?token=${token}`)
+        .then(spaceRes => {
+          // timestamp of latest publish
+          cacheVersion = spaceRes.data.space.version
+          // eslint-disable-next-line
+          console.log(spaceRes)
+          // Call for all Links using the Links API: https://www.storyblok.com/docs/Delivery-Api/Links
+          axios
+            .get(
+              `https://api.storyblok.com/v1/cdn/links?token=${token}&version=${version}&cv=${cacheVersion}`
+            )
+            .then(res => {
+              // eslint-disable-next-line
+              console.log(res)
+              Object.keys(res.data.links).forEach(key => {
+                if (res.data.links[key].slug !== 'home') {
+                  routes.push('/' + res.data.links[key].slug)
+                }
+              })
+
+              callback(null, routes)
+            })
         })
     }
+    // }
+    // routes: function() {
+    //   return axios
+    //     .get(
+    //       'https://api.storyblok.com/v1/cdn/stories?&version=published&token=4lBKmfH0c8GkkPfryFIBywtt&starts_with=crosslines&cv=' +
+    //         Math.floor(Date.now() / 1e3)
+    //     )
+    //     .then(res => {
+    //       const crossLines = res.data.stories.map(el => el.full_slug)
+    //       return ['/', '/crosslines', '/about', ...crossLines]
+    //     })
+    // }
   },
   /*
    ** Axios module configuration
