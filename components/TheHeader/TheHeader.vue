@@ -5,7 +5,7 @@
         <h1>MUPATI</h1>
       </div>
       <ul class="nav-links">
-        <nuxt-link to="/" tag="li" class="nav-link">
+        <nuxt-link to="/#" tag="li" class="nav-link">
           <a>HOME</a>
         </nuxt-link>
         <nuxt-link to="/wordsmith" tag="li" class="nav-link">

@@ -15,7 +15,7 @@ export default {
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
       },
       {
         hid: 'description',
@@ -51,7 +51,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/fetchSinglePost.js', '~/plugins/filters.js'],
 
   /*
    ** Nuxt.js modules

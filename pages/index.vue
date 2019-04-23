@@ -45,7 +45,7 @@
         <dt>WORDSMITH</dt>
         <dd>
           Where I try to impress my audience with a level of literature prowess
-          through poetry, satire, sarcasm and any mean I deem appropriate to
+          through poetry, satire, sarcasm and any means I deem appropriate to
           talk about contemporary issues of interest.
         </dd>
         <dt>TECH</dt>

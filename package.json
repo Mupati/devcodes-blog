@@ -1,7 +1,7 @@
 {
   "name": "devcodes",
   "version": "1.0.0",
-  "description": "Devcodes Blog",
+  "description": "Mupati The Wordsmith",
   "author": "Mupati",
   "private": true,
   "scripts": {
@@ -16,7 +16,8 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/google-analytics": "^2.2.0",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.4.0",
+    "marked": "^0.6.2",
+    "nuxt": "^2.6.2",
     "storyblok-nuxt": "^1.0.1"
   },
   "devDependencies": {
