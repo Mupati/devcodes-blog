@@ -3,6 +3,7 @@
     <Hero :hero-image="image" :page-title="title" class="post-thumbnail" />
     <main>
       <article class="post-detail">
+        <!-- eslint-disable-next-line -->
         <p v-html="$options.filters.markdown(content)"></p>
       </article>
     </main>

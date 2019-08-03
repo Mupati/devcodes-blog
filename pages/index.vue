@@ -32,4 +32,9 @@ export default {
 main {
   margin: 2em 5%;
 }
+@media (max-width: 768px) {
+  main {
+    margin: 2em 0;
+  }
+}
 </style>
