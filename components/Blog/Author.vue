@@ -4,7 +4,60 @@
       <img :src="image" alt="author" />
     </div>
     <div class="author--description">
-      <p>Author<br />{{ name }}</p>
+      <h3 class="author--name">Author: {{ name }}</h3>
+      <p class="author--biography">
+        I am a Software Engineer and a Wordsmith by Inspiration.<br />
+        I write about topical issues in the society from a Christian perspective
+        and share my experience as a Software Developer on this blog. I hope to
+        provide a way of navigating the delicate issues in society with
+        inspiration from the Word of God, increase my knowledge and broaden my
+        scope of thinking as a Software Developer as I expose my ideas to
+        critique by everyone.
+        <br />
+        Read more <nuxt-link to="/about">about me.</nuxt-link>
+      </p>
+      <ul class="author--social-links">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/kofiobrasiocran"
+            target="_blank"
+            rel="noreferrer noopenerI"
+            ><img src="/linkedin.png" alt="linkedin-link"
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Mupati"
+            target="_blank"
+            rel="noreferrer noopenerI"
+            ><img src="/github.png" alt="github-link"
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://mupati.devcodes.co"
+            target="_blank"
+            rel="noreferrer noopener"
+            ><img src="/domain.png" alt="website-link"
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://www.twitter.com/kofi_mupati"
+            target="_blank"
+            rel="noreferrer noopenerI"
+            ><img src="/twitter.png" alt="twitter-link"
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://www.facebook.com/brakroxeffectx"
+            target="_blank"
+            rel="noreferrer noopenerI"
+            ><img src="/facebook.png" alt="facebook-link"
+          /></a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -28,18 +81,44 @@ export default {
 <style scoped>
 #author {
   display: flex;
-  flex-direction: column;
-  -ms-flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 1em 2em;
+  border: 1px solid #022d30;
+  border-radius: 3px;
+  margin: 0 20%;
+}
+.author--image {
+  padding-right: 2em;
+  flex-grow: 1;
 }
 .author--image img {
-  height: 100px;
-  width: 100px;
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
 }
 .author--description {
-  padding: 0.1 rem 0;
-  text-align: center;
+  padding: 0.1rem 2rem;
+  flex-grow: 2;
+}
+ul > li {
+  display: inline-block;
+}
+li {
+  margin-right: 1em;
+}
+@media (max-width: 768px) {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  #author {
+    flex-direction: column;
+    border: 0;
+    margin: 0;
+    padding: 0.2em 0.2em;
+  }
+  .author--description {
+    border: 0;
+    padding: 0.1rem 0.5rem;
+  }
 }
 </style>

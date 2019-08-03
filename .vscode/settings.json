@@ -1,0 +1,6 @@
+{
+  "editor.formatOnSave": false,
+  "autoimport.semicolon": false,
+  "autoimport.useSemiColon": false,
+  "vetur.format.defaultFormatter.html": "prettier"
+}

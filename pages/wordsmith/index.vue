@@ -1,5 +1,7 @@
 <template>
   <section id="posts">
+    <Hero id="hero" hero-image="/wordsmith.jpg" page-title="WORDSMITH" />
+
     <PostPreview
       v-for="post in posts"
       :id="post.id"
@@ -13,9 +15,11 @@
 
 <script>
 import PostPreview from '@/components/Blog/PostPreview'
+import Hero from '@/components/Hero/Hero'
 export default {
   components: {
-    PostPreview
+    PostPreview,
+    Hero
   },
   asyncData(context) {
     return context.app.$storyapi
@@ -43,16 +47,8 @@ export default {
 
 <style scoped>
 #posts {
-  padding-top: 2rem;
+  /* margin-top: 7rem; */
   display: flex;
-  flex-wrap: wrap;
-  /* justify-content: center;
-  align-items: center; */
   flex-direction: column;
-}
-@media (min-width: 35rem) {
-  #posts {
-    flex-direction: row;
-  }
 }
 </style>

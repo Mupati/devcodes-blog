@@ -1,30 +1,22 @@
 <template>
   <div id="post" v-editable="editable">
-    <header
-      class="post-thumbnail"
-      :style="{ backgroundImage: 'url(' + image + ')' }"
-    >
-      <h1>{{ title }}</h1>
-    </header>
+    <Hero :hero-image="image" :page-title="title" class="post-thumbnail" />
     <main>
-      <aside>
-        <Author
-          name="Bra Krox Effectx"
-          image="https://res.cloudinary.com/mupati/image/upload/v1555683114/blog_authors/koc.jpg"
-        />
-      </aside>
       <article class="post-detail">
         <p v-html="$options.filters.markdown(content)"></p>
       </article>
     </main>
+    <Author name="Kofi Obrasi Ocran" image="/ocran.jpeg" />
   </div>
 </template>
 
 <script>
 import Author from '@/components/Blog/Author'
+import Hero from '@/components/Hero/Hero'
 export default {
   components: {
-    Author
+    Author,
+    Hero
   },
   props: {
     image: {
@@ -49,49 +41,23 @@ export default {
 
 <style scoped>
 #post {
-  margin: 4.5rem 0;
-}
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 0 1rem;
 }
 main {
-  display: flex;
-  margin: 3rem 5%;
-}
-aside {
-  margin-top: 2rem;
-  margin-right: 2rem;
-  flex-grow: 3;
+  margin: 3rem 20% 6rem;
 }
 article {
-  flex-grow: 9;
+  flex-grow: 1;
 }
 .post-thumbnail {
-  width: 100%;
   height: 300px;
-  background-size: cover;
-  background-position: center;
 }
 .post-detail {
-  margin: 0 auto;
+  margin: 0 auto 10em;
 }
-h1 {
-  text-align: center;
-}
-p {
-  white-space: pre-line;
-}
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   main {
-    flex-direction: column;
-  }
-  aside {
-    order: 2;
-  }
-  article {
-    order: 1;
+    margin: 3rem 5%;
   }
 }
 </style>

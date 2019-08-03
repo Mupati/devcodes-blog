@@ -2,11 +2,12 @@
   <nuxt-link :to="'/' + id" class="post-preview">
     <article>
       <div
-        :style="{ backgroundImage: 'url(' + image + ')' }"
         class="post-preview-thumbnail"
+        :style="{ backgroundImage: 'url(' + image + ')' }"
       ></div>
       <div class="post-preview-content">
         <h1>{{ title }}</h1>
+        <span id="divider"></span>
         <p>{{ excerpt }}</p>
       </div>
     </article>
@@ -42,29 +43,44 @@ a {
   color: #000;
 }
 .post-preview {
-  border-radius: 3px;
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
-  /* width: 90%; */
-  height: 20rem;
-  margin: 1rem;
+  margin: 10px 20%;
 }
-
 .post-preview:hover {
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}
+article {
+  display: flex;
 }
 .post-preview-thumbnail {
   background-position: center;
   background-size: cover;
-  /* width: 20rem; */
-  height: 8rem;
+  min-width: 15em;
 }
+
 .post-preview-content {
-  text-align: center;
-  padding: 1rem;
+  padding: 3em 2em;
 }
-@media (min-width: 35rem) {
+#divider {
+  display: block;
+  width: 3rem;
+  background-color: #06c4d1;
+  height: 2px;
+}
+@media (max-width: 768px) {
   .post-preview {
-    width: 25rem;
+    margin: 10px 2%;
+  }
+}
+@media (max-width: 600px) {
+  .post-preview {
+    margin: 10px 2%;
+  }
+  article {
+    flex-direction: column;
+  }
+  .post-preview-thumbnail {
+    min-height: 15em;
   }
 }
 </style>

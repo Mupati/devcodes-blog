@@ -1,18 +1,21 @@
 <template>
-  <div>
+  <div id="app">
     <TheHeader />
     <main class="main-content">
       <nuxt />
     </main>
+    <TheFooter id="app-footer" />
   </div>
 </template>
 
 <script>
 import TheHeader from '@/components/TheHeader/TheHeader'
+import TheFooter from '@/components/TheFooter/TheFooter'
 
 export default {
   components: {
-    TheHeader
+    TheHeader,
+    TheFooter
   }
 }
 </script>
@@ -35,7 +38,15 @@ dd,
 dt {
   line-height: 1.5rem;
 }
-.main-content {
-  margin-top: 4.5rem;
+#app {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
 }
+.main-content {
+  margin-top: 4.3rem;
+}
+/* #app-footer {
+  
+} */
 </style>
