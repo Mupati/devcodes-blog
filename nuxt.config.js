@@ -85,7 +85,7 @@ export default {
       let cacheVersion = 0
 
       // other routes that are not in Storyblok with their slug.
-      const routes = ['/'] // adds / directly
+      const routes = ['/', '/about'] // adds / directly
 
       // Load space and receive latest cache version key to improve performance
       axios
