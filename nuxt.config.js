@@ -8,7 +8,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Mupati The Wordsmith',
+    title: 'BLOG | KOFI OBRASI OCRAN',
     meta: [
       {
         charset: 'utf-8'
@@ -21,6 +21,30 @@ export default {
         hid: 'description',
         name: 'description',
         content: pkg.description
+      },
+      {
+        property:"og:title",
+        content="Blog | KOFI OBRASI OCRAN" 
+      },
+      {
+        property:"og:description",
+        content:"Great content with a great depth of thought"
+      },
+      {
+        property:"og:image",
+        content:"https://www.devcodes.co/blog-image.jpg"
+      }, 
+      {
+        property:"og:url",
+        content:"https://www.devcodes.co"
+      },
+      {
+        property:"og:type",
+        content:"website"
+      },
+      {
+        name:"twitter:card",
+        content:"https://www.devcodes.co/blog-image.jpg"
       }
     ],
     link: [
@@ -62,10 +86,7 @@ export default {
     [
       'storyblok-nuxt',
       {
-        accessToken:
-          process.env.NODE_ENV === 'production'
-            ? '4lBKmfH0c8GkkPfryFIBywtt'
-            : 'nsd8ctxirqtZAxFQwxYgLwtt',
+        accessToken: process.env.NODE_ENV === 'production' ? '4lBKmfH0c8GkkPfryFIBywtt' : 'nsd8ctxirqtZAxFQwxYgLwtt',
         cacheProvider: 'memory'
       }
     ],
@@ -93,8 +114,6 @@ export default {
         .then(spaceRes => {
           // timestamp of latest publish
           cacheVersion = spaceRes.data.space.version
-          // eslint-disable-next-line
-          console.log(spaceRes)
           // Call for all Links using the Links API: https://www.storyblok.com/docs/Delivery-Api/Links
           axios
             .get(
@@ -102,13 +121,11 @@ export default {
             )
             .then(res => {
               // eslint-disable-next-line
-              console.log(res)
               Object.keys(res.data.links).forEach(key => {
                 if (res.data.links[key].slug !== 'home') {
                   routes.push('/' + res.data.links[key].slug)
                 }
               })
-
               callback(null, routes)
             })
         })
