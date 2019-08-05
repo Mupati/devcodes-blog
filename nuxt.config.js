@@ -3,7 +3,6 @@ import pkg from './package'
 
 export default {
   mode: 'universal',
-
   /*
    ** Headers of the page
    */
@@ -23,28 +22,28 @@ export default {
         content: pkg.description
       },
       {
-        property:"og:title",
-        content="Blog | KOFI OBRASI OCRAN" 
+        property: 'og:title',
+        content: 'BLOG KOFI OBRASI OCRAN'
       },
       {
-        property:"og:description",
-        content:"Great content with a great depth of thought"
+        property: 'og:description',
+        content: 'Great content with a great depth of thought'
       },
       {
-        property:"og:image",
-        content:"https://www.devcodes.co/blog-image.jpg"
-      }, 
-      {
-        property:"og:url",
-        content:"https://www.devcodes.co"
+        property: 'og:image',
+        content: 'https://www.devcodes.co/blog-image.jpg'
       },
       {
-        property:"og:type",
-        content:"website"
+        property: 'og:url',
+        content: 'https://www.devcodes.co'
       },
       {
-        name:"twitter:card",
-        content:"https://www.devcodes.co/blog-image.jpg"
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        name: 'twitter:card',
+        content: 'https://www.devcodes.co/blog-image.jpg'
       }
     ],
     link: [
@@ -86,7 +85,10 @@ export default {
     [
       'storyblok-nuxt',
       {
-        accessToken: process.env.NODE_ENV === 'production' ? '4lBKmfH0c8GkkPfryFIBywtt' : 'nsd8ctxirqtZAxFQwxYgLwtt',
+        accessToken:
+          process.env.NODE_ENV === 'production'
+            ? '4lBKmfH0c8GkkPfryFIBywtt'
+            : 'nsd8ctxirqtZAxFQwxYgLwtt',
         cacheProvider: 'memory'
       }
     ],

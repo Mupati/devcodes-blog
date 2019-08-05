@@ -1,7 +1,7 @@
 {
   "name": "devcodes",
   "version": "1.0.0",
-  "description": "KOFI OBRASI OCRAN",
+  "description": "BLOG | KOFI OBRASI OCRAN",
   "author": "Mupati",
   "private": true,
   "scripts": {
@@ -13,11 +13,11 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/axios": "^5.5.4",
     "@nuxtjs/google-analytics": "^2.2.0",
     "cross-env": "^5.2.0",
     "marked": "^0.7.0",
-    "nuxt": "^2.6.2",
+    "nuxt": "^2.8.1",
     "storyblok-nuxt": "^1.0.1"
   },
   "devDependencies": {
@@ -25,18 +25,18 @@
     "babel-eslint": "^10.0.2",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
-    "eslint-config-standard": ">=12.0.0",
+    "eslint-config-standard": "^13.0.1",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.2.1",
-    "eslint-plugin-import": ">=2.16.0",
-    "eslint-plugin-jest": ">=22.3.0",
-    "eslint-plugin-node": ">=8.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.14.1",
+    "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-promise": ">=4.0.1",
+    "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": ">=4.0.0",
     "eslint-plugin-vue": "^5.2.3",
-    "nodemon": "^1.18.9",
+    "nodemon": "^1.19.1",
     "prettier": "^1.18.2"
   }
 }
