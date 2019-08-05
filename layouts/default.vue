@@ -29,6 +29,7 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   background-color: #eff1f5;
+  height: 100%;
 }
 a {
   text-decoration: none;
@@ -38,13 +39,17 @@ dd,
 dt {
   line-height: 1.5rem;
 }
-#app {
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* #app {
   display: flex;
   flex-direction: column;
-  align-content: flex-end;
-}
+} */
 .main-content {
-  margin-top: 4.3rem;
+  margin-top: 2.28rem;
 }
 /* #app-footer {
   

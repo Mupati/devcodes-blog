@@ -24,6 +24,7 @@ export default {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   height: 60vh;
 }
 header {

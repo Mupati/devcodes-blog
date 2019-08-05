@@ -33,8 +33,6 @@ ul {
   justify-content: space-between;
   flex-wrap: wrap;
   text-align: center;
-  margin: 0;
-  padding: 0;
 }
 li {
   list-style: none;

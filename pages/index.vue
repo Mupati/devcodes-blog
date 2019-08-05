@@ -30,7 +30,7 @@ export default {
   color: #000;
 }
 main {
-  margin: 2em 5%;
+  margin: 5em 5%;
 }
 @media (max-width: 768px) {
   main {
