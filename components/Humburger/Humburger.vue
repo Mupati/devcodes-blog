@@ -19,8 +19,7 @@ export default {
   props: {
     isOpenIcon: {
       type: Boolean,
-      required: true,
-      default: true
+      required: true
     }
   },
   methods: {

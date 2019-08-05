@@ -57,4 +57,15 @@
 export default {}
 </script>
 
-<style scoped></style>
+<style scoped>
+#about {
+  margin-top: 2em;
+  padding: 2em;
+}
+@media (max-width: 480px) {
+  #about {
+    margin-top: 5em;
+    padding: 1em;
+  }
+}
+</style>
