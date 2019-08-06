@@ -23,14 +23,25 @@ export default {
 <style>
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'Lato', sans-serif;
   margin: 0;
-  background-color: #eff1f5;
+  padding: 0;
+}
+html,
+body,
+#__nuxt,
+#__layout,
+#app {
   height: 100%;
 }
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #eff1f5;
+}
+.main-content {
+  margin-top: 2.28rem;
+  min-height: 100%;
+}
+
 a {
   text-decoration: none;
 }
@@ -39,19 +50,4 @@ dd,
 dt {
   line-height: 1.5rem;
 }
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-/* #app {
-  display: flex;
-  flex-direction: column;
-} */
-.main-content {
-  margin-top: 2.28rem;
-}
-/* #app-footer {
-  
-} */
 </style>
