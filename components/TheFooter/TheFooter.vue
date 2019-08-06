@@ -69,10 +69,13 @@ footer {
   margin-left: 5em;
 }
 #social {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: 1em;
+  padding-top: 0.5em;
 }
-ul > li {
-  display: inline-block;
+ul {
+  display: flex;
+  list-style: none;
 }
 li {
   margin-right: 1em;

@@ -3,11 +3,8 @@ import pkg from './package'
 
 export default {
   mode: 'universal',
-  /*
-   ** Headers of the page
-   */
   head: {
-    title: 'BLOG | KOFI OBRASI OCRAN',
+    title: 'BLOG - KOFI OBRASI OCRAN',
     meta: [
       {
         charset: 'utf-8'
@@ -23,7 +20,7 @@ export default {
       },
       {
         property: 'og:title',
-        content: 'BLOG KOFI OBRASI OCRAN'
+        content: 'BLOG - KOFI OBRASI OCRAN'
       },
       {
         property: 'og:description',
@@ -31,7 +28,7 @@ export default {
       },
       {
         property: 'og:image',
-        content: 'https://www.devcodes.co/blog-image.jpg'
+        content: 'https://www.devcodes.co/seo-image.jpg'
       },
       {
         property: 'og:url',
@@ -43,7 +40,7 @@ export default {
       },
       {
         name: 'twitter:card',
-        content: 'https://www.devcodes.co/blog-image.jpg'
+        content: 'https://www.devcodes.co/seo-image.jpg'
       }
     ],
     link: [
@@ -80,8 +77,6 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
-    // '@nuxtjs/axios'
     [
       'storyblok-nuxt',
       {
