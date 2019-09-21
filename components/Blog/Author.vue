@@ -8,11 +8,7 @@
       <p class="author--biography">
         I am a Software Engineer and a Wordsmith by Inspiration.<br />
         I write about topical issues in the society from a Christian perspective
-        and share my experience as a Software Developer on this blog. I hope to
-        provide a way of navigating the delicate issues in society with
-        inspiration from the Word of God, increase my knowledge and broaden my
-        scope of thinking as a Software Developer as I expose my ideas to
-        critique by everyone.
+        and share my experience as a Software Developer on this blog.
         <br />
         Read more <nuxt-link to="/about">about me.</nuxt-link>
       </p>
