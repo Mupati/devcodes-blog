@@ -16,11 +16,13 @@
 <script>
 import PostPreview from '@/components/Blog/PostPreview'
 import Hero from '@/components/Hero/Hero'
+import storyblokLivePreview from '@/mixins/storyblokLivePreview'
 export default {
   components: {
     PostPreview,
     Hero
   },
+  mixins: [storyblokLivePreview],
   asyncData(context) {
     return context.app.$storyapi
       .get('cdn/stories', {
@@ -28,8 +30,6 @@ export default {
         starts_with: 'wordsmith'
       })
       .then(res => {
-        /* eslint-disable no-console */
-        console.log(res)
         return {
           posts: res.data.stories.map(el => {
             return {
@@ -47,7 +47,6 @@ export default {
 
 <style scoped>
 #posts {
-  /* margin-top: 7rem; */
   display: flex;
   flex-direction: column;
 }

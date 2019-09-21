@@ -16,11 +16,13 @@
 <script>
 import PostPreview from '@/components/Blog/PostPreview'
 import Hero from '@/components/Hero/Hero'
+import storyblokLivePreview from '@/mixins/storyblokLivePreview'
 export default {
   components: {
     PostPreview,
     Hero
   },
+  mixins: [storyblokLivePreview],
   asyncData(context) {
     return context.app.$storyapi
       .get('cdn/stories', {

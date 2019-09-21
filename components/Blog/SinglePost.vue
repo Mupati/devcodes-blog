@@ -2,10 +2,10 @@
   <div id="post" v-editable="editable">
     <Hero :hero-image="image" :page-title="title" class="post-thumbnail" />
     <main>
-      <article class="post-detail">
+      <no-ssr>
         <!-- eslint-disable-next-line -->
-        <p v-html="$options.filters.markdown(content)"></p>
-      </article>
+        <article class="post-detail" v-html="blogContent"></article>
+      </no-ssr>
     </main>
     <Author name="Kofi Obrasi Ocran" image="/ocran.jpeg" />
   </div>
@@ -29,12 +29,17 @@ export default {
       required: true
     },
     content: {
-      type: String,
+      type: Object,
       required: true
     },
     editable: {
       type: Object,
       required: true
+    }
+  },
+  computed: {
+    blogContent() {
+      return this.$storyapi.richTextResolver.render(this.content)
     }
   }
 }

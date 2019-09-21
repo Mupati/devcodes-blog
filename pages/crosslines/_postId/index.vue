@@ -11,10 +11,12 @@
 
 <script>
 import SinglePost from '@/components/Blog/SinglePost'
+import storyblokLivePreview from '@/mixins/storyblokLivePreview'
 export default {
   components: {
     SinglePost
   },
+  mixins: [storyblokLivePreview],
   asyncData(context) {
     return context.app.$storyapi
       .get('cdn/stories/crosslines/' + context.params.postId, {
@@ -28,12 +30,6 @@ export default {
           content: res.data.story.content.content
         }
       })
-  },
-
-  mounted() {
-    this.$storybridge.on('change', () => {
-      location.reload(true)
-    })
   }
 }
 </script>

@@ -14,11 +14,13 @@
 <script>
 import Hero from '@/components/Hero/Hero'
 import Category from '@/components/Categories/Category'
+import storyblokLivePreview from '@/mixins/storyblokLivePreview'
 export default {
   components: {
     Hero,
     Category
   },
+  mixins: [storyblokLivePreview],
   data() {
     return {}
   }
